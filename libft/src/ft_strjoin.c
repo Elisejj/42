@@ -6,7 +6,7 @@
 /*   By: lmeribal <lmeribal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:35:10 by lmeribal          #+#    #+#             */
-/*   Updated: 2020/11/14 22:01:54 by lmeribal         ###   ########.fr       */
+/*   Updated: 2020/11/14 22:12:51 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = -1;
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	res = (char*)malloc((s1_len + s2_len + 1) * sizeof(char));
-	if (!res)
+	if (!(res = (char*)malloc((s1_len + s2_len + 1) * sizeof(char))))
 		return (NULL);
 	while (++i < s1_len)
 	{
