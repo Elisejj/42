@@ -10,11 +10,13 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     c2 = (unsigned char*)s2;
 
     i = 0;
-    while (i < n)
+    while (i < n && s1[i] != '\0' && s2[i] != '\0')
     {
         if (c1[i] != c2[i])
             return c1[i] - c2[i];
-        i += 1;
+        i++;
     }
+    if (i != n)
+        return (c1[i] - c2[i]);
     return 0;
 }
