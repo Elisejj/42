@@ -6,11 +6,9 @@
 /*   By: lmeribal <lmeribal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:18:29 by lmeribal          #+#    #+#             */
-/*   Updated: 2020/11/14 20:41:39 by lmeribal         ###   ########.fr       */
+/*   Updated: 2020/11/15 16:23:12 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 static	const	char		*preproc_num(const char *str)
 {

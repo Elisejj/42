@@ -6,7 +6,7 @@
 /*   By: lmeribal <lmeribal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:20:53 by lmeribal          #+#    #+#             */
-/*   Updated: 2020/11/14 22:04:12 by lmeribal         ###   ########.fr       */
+/*   Updated: 2020/11/15 16:20:53 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char			**ft_split(char const *s, char c)
 		k = j;
 		if (!(res[i] = (char*)malloc(sizeof(char) * (word_len(&s[j], c) + 1))))
 		{
-			leak(res, j);
+			leak(res, i);
 			return (NULL);
 		}
 		while (s[j] != c && s[j] != '\0')
