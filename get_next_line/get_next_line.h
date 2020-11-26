@@ -11,5 +11,8 @@ char	*ft_strchr(const char *str, int n);
 size_t	ft_strlen(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int ch, size_t n);
+char	*ft_strcpy(char *dest, char *src);
+void ft_strclr(char *str);
+
 
 # endif
