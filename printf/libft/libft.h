@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmeribal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmeribal <lmeribal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:45:55 by lmeribal          #+#    #+#             */
-/*   Updated: 2021/01/17 21:23:22 by lmeribal         ###   ########.fr       */
+/*   Updated: 2021/01/18 21:17:29 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 t_list				*ft_lstmap(t_list *lst,
 					void *(*f)(void *), void (*del)(void *));
 char				**ft_split(char const *s, char c);
-char				*ft_itoa_base(unsigned int value, int base);
+char				*ft_itoa_base(unsigned long int value, int base);
 
 #endif
