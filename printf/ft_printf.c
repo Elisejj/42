@@ -6,7 +6,7 @@
 /*   By: lmeribal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 18:11:23 by lmeribal          #+#    #+#             */
-/*   Updated: 2021/01/18 16:54:12 by lmeribal         ###   ########.fr       */
+/*   Updated: 2021/01/23 13:52:03 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int printf_parser(const char *format, va_list argptr)
     args_count = 0;
     first_flag_index = 0;
     ptr_to_flag = ft_strchr(format, '%');
-
-    // Если есть проценты
     if (ptr_to_flag)
     {
         while (format[first_flag_index] != '%')
@@ -37,7 +35,7 @@ int printf_parser(const char *format, va_list argptr)
             ptr_to_flag = ft_strchr(ptr_to_flag, '%');
         }
     }
-    else // иначе просто вернули строку и длину
+    else 
     {
         ft_putstr_fd((char *)format, 1);
         return ft_strlen(format);
@@ -48,8 +46,10 @@ int printf_parser(const char *format, va_list argptr)
         if (!(str_first_part = ft_substr(format, 0, first_flag_index)))
             return (-1);
         ft_putstr_fd(str_first_part, 1);
+        if (str_first_part)
+            free(str_first_part);
         print_length += ft_strlen(str_first_part);
-        struct_parser(format, argptr, args_count, &print_length);
+        print_length += struct_parser(format, argptr, args_count);
     }
     return (print_length);
 }

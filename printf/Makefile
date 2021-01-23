@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmeribal <lmeribal@student.42.fr>          +#+  +:+       +#+         #
+#    By: lmeribal <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/15 19:31:42 by lmeribal          #+#    #+#              #
-#    Updated: 2021/01/18 21:26:19 by lmeribal         ###   ########.fr        #
+#    Updated: 2021/01/22 18:12:52 by lmeribal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,11 +24,12 @@ SRC =libft/ft_putchar_fd.c libft/ft_strchr.c libft/ft_strlen.c libft/ft_atoi.c l
 	libft/ft_strdup.c libft/ft_substr.c libft/ft_putnbr_fd.c libft/ft_putstr_fd.c\
 	libft/ft_itoa.c libft/ft_strlcpy.c libft/ft_itoa_base.c libft/ft_isalpha.c libft/ft_toupper.c\
 	libft/ft_strjoin.c libft/ft_strncmp.c\
-	ft_printf.c main.c \
-	parsers/struct_parser.c \
+	ft_printf.c ft_leak_checker.c main.c \
+	parsers/ft_printf_parser.c parsers/ft_printf_parser_utils.c parsers/ft_handlers.c\
 	processors/s_processor.c processors/c_processor.c processors/di_processor.c\
 	processors/u_processor.c processors/xX_processor.c processors/p_processor.c\
-	processors/values_processor.c
+	processors/values_processor.c\
+	put_strings.c
 
 OBJ =		$(SRC:.c=.o)
 

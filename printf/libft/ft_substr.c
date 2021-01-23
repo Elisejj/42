@@ -6,7 +6,7 @@
 /*   By: lmeribal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:42:34 by lmeribal          #+#    #+#             */
-/*   Updated: 2020/11/25 18:06:47 by lmeribal         ###   ########.fr       */
+/*   Updated: 2021/01/22 18:15:06 by lmeribal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ char	*ft_substr(char const *s, int start, int len)
 	i = 0;
 	if ((size_t)start >= ft_strlen(s))
 		return (ft_strdup(""));
-	res = (char*)malloc((len + 1) * sizeof(char));
-	if (!res)
+	if (!(res = (char*)malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	if (s)
 	{
